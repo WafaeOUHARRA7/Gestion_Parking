@@ -42,4 +42,5 @@ public class Place {
     public void setBloc(Bloc bloc) {
         this.bloc = new Bloc(bloc.getNom());
     }
+
 }
