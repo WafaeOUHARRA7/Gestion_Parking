@@ -1,9 +1,11 @@
 package modeles;
 
 public class Vehicule {
+
     //attributes
     private String matricule;
     private String image;
+
     //constructors
     public Vehicule() {
     }
@@ -13,6 +15,7 @@ public class Vehicule {
         this.image = image;
     }
 
+    //getters
     public String getMatricule() {
         return matricule;
     }
@@ -21,6 +24,7 @@ public class Vehicule {
         return image;
     }
 
+    //setters
     public void setMatricule(String matricule) {
         this.matricule = matricule;
     }

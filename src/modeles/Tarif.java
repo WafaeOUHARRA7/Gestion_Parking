@@ -1,9 +1,11 @@
 package modeles;
 
 public class Tarif {
+
     //attributes
     private float tarif;
     private String periode;
+
     //constructors
     public Tarif(float tarif, String periode) {
         this.tarif = tarif;
@@ -13,6 +15,7 @@ public class Tarif {
     public Tarif() {
     }
 
+    //getters
     public float getTarif() {
         return tarif;
     }
@@ -21,6 +24,7 @@ public class Tarif {
         return periode;
     }
 
+    //setters
     public void setTarif(float tarif) {
         this.tarif = tarif;
     }

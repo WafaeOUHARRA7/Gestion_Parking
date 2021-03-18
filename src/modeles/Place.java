@@ -1,10 +1,12 @@
 package modeles;
 
 public class Place {
+
     //attributes
     private int num;
     private boolean etat;
     private Bloc bloc;
+
     //constructors
     public Place() {
     }
@@ -12,9 +14,10 @@ public class Place {
     public Place(int num, boolean etat, Bloc bloc) {
         this.num = num;
         this.etat = etat;
-        this.bloc = bloc;
+        this.bloc = new Bloc(bloc.getNom());
     }
 
+    //getters
     public int getNum() {
         return num;
     }
@@ -27,6 +30,7 @@ public class Place {
         return bloc;
     }
 
+    //setters
     public void setNum(int num) {
         this.num = num;
     }
@@ -36,7 +40,6 @@ public class Place {
     }
 
     public void setBloc(Bloc bloc) {
-        this.bloc = new Bloc();
-        this.bloc.setNom(bloc.getNom());
+        this.bloc = new Bloc(bloc.getNom());
     }
 }

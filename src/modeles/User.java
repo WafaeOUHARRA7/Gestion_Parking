@@ -1,12 +1,14 @@
 package modeles;
 
 public class User {
+
     //attributes
     private int num;
     private String nom;
     private String prenom;
     private String role;
     //emploie dans la base d e données
+
     //constructors
     public User() {
     }
@@ -18,6 +20,7 @@ public class User {
         this.role = role;
     }
 
+    //getters
     public int getNum() {
         return num;
     }
@@ -34,6 +37,7 @@ public class User {
         return role;
     }
 
+    //setters
     public void setNom(String nom) {
         this.nom = nom;
     }

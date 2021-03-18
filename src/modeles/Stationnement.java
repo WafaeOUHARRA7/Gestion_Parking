@@ -3,6 +3,7 @@ package modeles;
 import java.time.LocalDateTime;
 
 public class Stationnement {
+
     //attributes
     private int num;
     private Vehicule vehicule;
@@ -10,19 +11,21 @@ public class Stationnement {
     private LocalDateTime date_entree;
     private LocalDateTime date_sortie;
     private Tarif tarif;
+
     //constructors
     public Stationnement(int num, Vehicule vehicule, Place place, LocalDateTime date_entree, LocalDateTime date_sortie, Tarif tarif) {
         this.num = num;
-        this.vehicule = vehicule;
-        this.place = place;
+        this.vehicule = new Vehicule(vehicule.getMatricule(),vehicule.getImage());
+        this.place = new Place(place.getNum(),place.isEtat(),place.getBloc());
         this.date_entree = date_entree;
         this.date_sortie = date_sortie;
-        this.tarif = tarif;
+        this.tarif = new Tarif(tarif.getTarif(),tarif.getPeriode());
     }
 
     public Stationnement() {
     }
 
+    //getters
     public int getNum() {
         return num;
     }
@@ -47,16 +50,17 @@ public class Stationnement {
         return tarif;
     }
 
+    //setters
     public void setNum(int num) {
         this.num = num;
     }
 
     public void setVehicule(Vehicule vehicule) {
-        this.vehicule = vehicule;
+        this.vehicule = new Vehicule(vehicule.getMatricule(),vehicule.getImage());
     }
 
     public void setPlace(Place place) {
-        this.place = place;
+        this.place = new Place(place.getNum(),place.isEtat(),place.getBloc());
     }
 
     public void setDate_entree(LocalDateTime date_entree) {
@@ -68,7 +72,7 @@ public class Stationnement {
     }
 
     public void setTarif(Tarif tarif) {
-        this.tarif = tarif;
+        this.tarif = new Tarif(tarif.getTarif(),tarif.getPeriode());
     }
 
 }
