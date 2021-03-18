@@ -22,5 +22,4 @@ public class Bloc {
     public void setNom(String nom) {
         this.nom = nom;
     }
-
 }
